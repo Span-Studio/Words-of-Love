@@ -1,0 +1,21 @@
+{
+  "buttons": [
+    "html",
+    "formatting",
+    "bold",
+    "italic",
+    "unorderedlist",
+    "orderedlist",
+    "link",
+    "image"
+  ],
+  "plugins": [
+  ],
+  "stylesClass": "standard-redactor",
+  "removeScript": true,
+  "removeNewLines": true,
+  "removeComments": true,
+  "pastePlainText": true,
+  "pasteClean": true,
+  "linkNewTab": true
+}

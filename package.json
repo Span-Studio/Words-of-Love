@@ -1,0 +1,54 @@
+{
+  "name": "craft-dev",
+  "version": "1.0.0",
+  "description": "A Craft 3.0 website",
+  "main": "brunch-config.js",
+  "private": true,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "start": "brunch watch",
+    "test": "npm run start",
+    "db": "echo Osp8YZn7DqzGAxTCJVvt",
+    "root": "echo wFM9wrnSrk7iMrIce6Up",
+    "generate-images": "./craft imager-x/generate -v=general -t=default",
+    "server": "ssh forge@love.span.studio",
+    "oh-my-zsh": "curl -Lo install.sh https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh && sh install.sh",
+    "stmp": "https://app.sendgrid.com/guide/integrate/langs/smtp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:clarknelson/craft.dev.git"
+  },
+  "author": "clarknelson.com & span.studio",
+  "license": "PRIVATE",
+  "devDependencies": {
+    "@babel/preset-env": "^7.5.5",
+    "auto-reload-brunch": "^2.7.1",
+    "autoprefixer": "^9.6.1",
+    "babel-brunch": "^7.0.1",
+    "brunch": "^2.10.12",
+    "javascript-brunch": "^2.10.0",
+    "postcss-brunch": "^2.10.1",
+    "sass-brunch": "^2.10.8",
+    "terser-brunch": "^3.0.0"
+  },
+  "dependencies": {
+    "@vimeo/player": "^2.10.0",
+    "flickity": "^2.2.1",
+    "flickity-fade": "^1.0.0",
+    "flickity-imagesloaded": "^2.0.0",
+    "imagesloaded": "^4.1.4",
+    "intersection-observer": "^0.5.1",
+    "jquery": "^3.4.1",
+    "js-cookie": "^2.2.0",
+    "leaflet": "^1.6.0",
+    "lodash": "^4.17.15",
+    "mapbox-gl": "^1.2.0",
+    "normalize.css": "^8.0.1",
+    "pace-js": "^1.0.2",
+    "scrollama": "^1.4.4",
+    "youtube-player": "^5.5.2"
+  }
+}

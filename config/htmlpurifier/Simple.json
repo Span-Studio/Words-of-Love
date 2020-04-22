@@ -1,0 +1,11 @@
+{
+  "AutoFormat" : {
+    "RemoveEmpty": true
+  },
+  "HTML": {
+    "AllowedElements": ["p", "strong", "em", "a", "ul", "ol", "li", "br"]
+  },
+  "Attr": {
+    "AllowedFrameTargets": ["_blank"]
+  }
+}

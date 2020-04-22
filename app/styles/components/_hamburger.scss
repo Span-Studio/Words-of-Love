@@ -1,0 +1,62 @@
+$bar-height: 4px;
+$hamburger-angle: 135deg;
+
+@mixin hamburger($size) {
+  height: $size * 7;
+  width: $size * 7;
+  cursor: pointer;
+
+  .bar {
+    position: relative;
+    width: 100%;
+    height: $size;
+    transform-origin: center;
+    transition: all 0.4s ease;
+    border-radius: 1px;
+  }
+
+  .bar:nth-of-type(1) {
+    top: 0;
+  }
+
+  .bar:nth-of-type(2) {
+    top: calc(50% - #{$size});
+    transform: translateY(- $size);
+  }
+
+  .bar:nth-of-type(3) {
+    top: calc(100% - #{$size * 2});
+    transform: translateY(- $size * 2);
+  }
+
+  &.active {
+    .bar {
+      // transition-delay: 0s, 0.2s;
+      background: white;
+    }
+
+    .bar:nth-of-type(1) {
+      top: 50%;
+      transform: rotate($hamburger-angle);
+    }
+
+    .bar:nth-of-type(2) {
+      top: 50%;
+      background: transparent;
+      transform: translateY(- $size);
+    }
+
+    .bar:nth-of-type(3) {
+      top: 50%;
+      transform: translateY(- $size * 2) rotate(-$hamburger-angle);
+    }
+  }
+}
+
+.hamburger {
+  @include hamburger(4px);
+
+  .bar {
+    background: black;
+  }
+}

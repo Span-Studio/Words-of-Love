@@ -1,0 +1,46 @@
+.gallery {
+  width: 100%;
+
+  .slide {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.flickity-prev-next-button {
+  top: 0;
+  width: 50%;
+  height: 100%;
+  transform: none;
+  border-radius: 0;
+  background: none;
+
+  &:hover {
+    background: none;
+  }
+
+  &.previous {
+    left: 0;
+  }
+
+  &.next {
+    right: 0;
+  }
+
+  .flickity-button-icon {
+    display: none;
+  }
+}
+
+.mobile {
+  .flickity-prev-next-button {
+    .flickity-button-icon {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.button {
+  width: auto;
+  padding: 1em 1.5em;
+  margin: 0;
+  border: none;
+  border-radius: 1.75em;
+  background: $primary;
+  color: white;
+
+  line-height: 1;
+
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}

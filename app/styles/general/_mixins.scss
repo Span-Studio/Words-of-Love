@@ -1,0 +1,114 @@
+@mixin mq($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin phone() {
+  @include mq($phone-breakpoint) {
+    @content;
+  }
+}
+
+@mixin single() {
+  @include mq($single-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @include mq($tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @include mq($desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin gridItem($method: 'width', $cols: 0, $gutters: 0) {
+  #{$method}: ($cols * $col) + ($gutters * $gutter);
+}
+
+@mixin vertical-margins($m:1em) {
+  margin: $m 0;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+@mixin cover() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin custom-scrollbar($alpha, $beta, $size) {
+
+  // firefox
+  scrollbar-color: $alpha $beta;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  // chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    background: $beta;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $alpha;
+  }
+}
+
+@mixin highlight-color($alpha, $beta) {
+  ::selection {
+    background: $alpha;
+    color: $beta;
+  }
+}
+
+@mixin link($start: inherit, $hover: $primary) {
+  $transition: color 0.2s ease-in, border-color 0.2s ease-in;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  color: $start;
+  cursor: pointer;
+
+  &:hover {
+    color: $hover;
+  }
+
+  &.underline {
+    color: $start;
+    text-decoration: none;
+    transition: $transition;
+    padding-bottom: 0em;
+    border-bottom: 0.1em solid rgba($start, 1);
+
+    &:hover {
+      color: $hover;
+      border-bottom: 0.1em solid rgba($hover, 1);
+    }
+  }
+
+  &.underline-alt {
+    color: $start;
+    text-decoration: underline;
+    transition: $transition;
+
+    &:hover {
+      color: $hover;
+    }
+  }
+}

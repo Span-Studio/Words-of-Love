@@ -1,0 +1,61 @@
+html {
+  @extend .sans-serif;
+  font-size: 1vw;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.sans-serif {
+  font-family: Helvetica, sans-serif;
+}
+
+.caps {
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.sans-serif-small {
+  @extend .sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.425;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.sans-serif-medium {
+  @extend .sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.333333333;
+  margin-bottom: 0.6em;
+}
+
+.sans-serif-large {
+  @extend .sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.285;
+  margin-bottom: 0.4em;
+
+  &.bold{
+    font-weight: 600;
+  }
+}
+
+.sans-serif-huge {
+  @extend .sans-serif;
+  font-size: 3.45rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0.25em;
+
+  &.bold{
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,105 @@
+html {
+  font-size: 1vw;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.bold {
+  font-weight: 700; }
+
+.sans-serif, html, .sans-serif-small, .sans-serif-medium, .sans-serif-large, .sans-serif-huge {
+  font-family: Helvetica, sans-serif; }
+
+.caps, .redactor-dropdown-format .redactor-dropdown-item-caps, .full-redactor .caps,
+.simple-redactor .caps,
+.standard-redactor .caps,
+.custom-redactor .caps {
+  text-transform: uppercase;
+  letter-spacing: 0.01em; }
+
+.sans-serif-small {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.425;
+  text-transform: uppercase;
+  letter-spacing: 0.1em; }
+
+.sans-serif-medium {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.333333333;
+  margin-bottom: 0.6em; }
+
+.sans-serif-large {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.285;
+  margin-bottom: 0.4em; }
+  .sans-serif-large.bold {
+    font-weight: 600; }
+
+.sans-serif-huge {
+  font-size: 3.45rem;
+  font-weight: 600;
+  line-height: 1;
+  margin-bottom: 0.25em; }
+  .sans-serif-huge.bold {
+    font-weight: 600; }
+
+.primary-color, .redactor-dropdown-format .redactor-dropdown-item-colored {
+  color: red; }
+
+.full-redactor,
+.simple-redactor,
+.standard-redactor,
+.custom-redactor {
+  padding: 18px 16px; }
+  .full-redactor h1,
+  .full-redactor h2,
+  .full-redactor h3,
+  .full-redactor h4,
+  .full-redactor h5,
+  .full-redactor h6,
+  .simple-redactor h1,
+  .simple-redactor h2,
+  .simple-redactor h3,
+  .simple-redactor h4,
+  .simple-redactor h5,
+  .simple-redactor h6,
+  .standard-redactor h1,
+  .standard-redactor h2,
+  .standard-redactor h3,
+  .standard-redactor h4,
+  .standard-redactor h5,
+  .standard-redactor h6,
+  .custom-redactor h1,
+  .custom-redactor h2,
+  .custom-redactor h3,
+  .custom-redactor h4,
+  .custom-redactor h5,
+  .custom-redactor h6 {
+    margin: 0; }
+  .full-redactor img,
+  .simple-redactor img,
+  .standard-redactor img,
+  .custom-redactor img {
+    width: 100%; }
+  .full-redactor p,
+  .simple-redactor p,
+  .standard-redactor p,
+  .custom-redactor p {
+    margin-bottom: 1em; }
+  .full-redactor ul,
+  .simple-redactor ul,
+  .standard-redactor ul,
+  .custom-redactor ul {
+    margin: 1em;
+    list-style: disc inside; }
+    .full-redactor ul li,
+    .simple-redactor ul li,
+    .standard-redactor ul li,
+    .custom-redactor ul li {
+      margin: 0.5em 0; }
+
+
+/*# sourceMappingURL=cp.css.map*/

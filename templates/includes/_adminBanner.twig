@@ -1,0 +1,9 @@
+{% if entry ?? null and devMode and currentUser %}
+	<div class="admin-banner">
+		{% if currentUser %}
+			<a href="{{ entry.cpEditUrl }}" target="_blank">Edit page</a>
+		{% else %}
+			<a href="{{ loginUrl }}">Login</a>
+		{% endif %}
+	</div>
+{% endif %}

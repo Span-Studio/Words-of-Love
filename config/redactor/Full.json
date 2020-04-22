@@ -1,0 +1,70 @@
+{
+  "stylesClass": "full-redactor",
+  "buttonsTextLabeled": false,
+  "cleanOnEnter": true,
+  "cleanInlineOnEnter": false,
+  "removeScript": true,
+  "removeNewLines": true,
+  "removeComments": true,
+  "pastePlainText": true,
+  "pasteClean": true,
+  "pasteLinkTarget": "_blank",
+  "pasteKeepStyle": ["p"],
+  "pasteKeepClass": ["p"],
+  "pasteKeepAttrs": ["td", "th"],
+  "linkNewTab": true,
+  "linkTitle": false,
+  "linkNofollow": true,
+  "linkTarget": "_blank",
+  "structure": true,
+  "animation": false,
+  "buttons": [
+    "html",
+    "undo",
+    "redo",
+    "format",
+    "bold",
+    "italic",
+    "underline",
+    "deleted",
+    "line",
+    "lists",
+    "sup",
+    "sub",
+    "link",
+    "image",
+    "file"
+  ],
+  "plugins": [
+    "table",
+    "clips",
+    "widget",
+    "counter",
+    "properties",
+    "alignment",
+    "video"
+  ],
+  "clips": [
+    ["hello world", "<h2>Hello World</h2>"]
+  ],
+  "formattingHide": [
+    "h1",
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "blockquote",
+    "pre"
+  ],
+  "formattingAdd": {
+    "red-p-add": {
+      "title": "Red Paragraph",
+      "api": "module.block.format",
+      "args": {
+        "tag": "p",
+        "class": "red-styled"
+      }
+    }
+  }
+}

@@ -1,0 +1,148 @@
+body {
+  width: 100vw;
+  margin: 0;
+  overflow-x: hidden;
+  @include custom-scrollbar($primary, white, 0.5rem);
+  @include highlight-color($primary, white);
+
+  // when the user presses tab, this class will be added
+  &.outlines {
+    * {
+      outline: 2px solid $black;
+
+      &:target,
+      &:focus {
+        outline: 2px solid $black;
+      }
+    }
+
+    input,
+    textarea {
+
+      &:target,
+      &:focus {
+        outline: none;
+      }
+
+      &.outline {
+
+        &:target,
+        &:focus {
+          border: 1px solid $primary;
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+* {
+  box-sizing: border-box;
+  position: relative;
+  outline: none;
+  line-height: $ratio;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+  font-weight: 400;
+  line-height: inherit;
+  margin: 0;
+}
+
+b,
+strong {
+  @extend .bold;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  @include link($primary, lighten($primary, 25%));
+}
+
+ul,
+ol {
+  list-style: disc;
+  margin-left: 1em;
+  padding: 0;
+
+  &.plain {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &.inline {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      margin-right: 1em;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+
+  li {
+    margin: 0 0 1em;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+br {
+  line-height: 0;
+}
+
+hr {
+  margin: 0;
+  border: none;
+  border-bottom: 1em solid $primary;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  background: none;
+  padding: 1em;
+  border: 1px solid $primary;
+  line-height: 1;
+  border-radius: 2em;
+
+  &::-webkit-input-placeholder,
+  &:-ms-input-placeholder,
+  &::-ms-input-placeholder,
+  &::placeholder {
+    color: white;
+  }
+}
+
+iframe {
+  display: block;
+}

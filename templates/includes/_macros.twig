@@ -1,0 +1,84 @@
+{% macro rich_content_layout(query) %}
+  {% import _self as macros %}
+{% endmacro %}
+
+{% macro truncate(text, length) %}
+  {{- text|length > length|default(50) ? text|slice(0, length|default(50)) ~ '...' : text -}}
+{% endmacro %}
+
+{% macro truncateWords(text, length, suffix) %}
+  {% spaceless %}
+    {% autoescape false %}
+      {# settings #}
+      {% set defaultSuffix = '…' %}
+      {# logic #}
+      {% if text and length %}
+        {% set suffix = suffix|default(defaultSuffix) %}
+        {% set text = text|striptags %}
+        {% set text = text|replace('/\\n/', '\n ') %}
+        {% set array = text|split(' ') %}
+        {% set arrayTruncated = array|slice(0, length) %}
+        {% set string = arrayTruncated|join(' ') %}
+        {% if array|length > length %}
+          {% set string = string ~ suffix %}
+        {% endif %}
+        {% set string = string|replace('/\\n\\s/', '\n') %}
+        {{ string }}
+      {% endif %}
+    {% endautoescape %}
+  {% endspaceless %}
+{% endmacro %}
+
+{%- macro imager_url(image, settings) -%}
+  {%- set transformedImage = craft.imager.transformImage(image, settings) -%}
+  {%- if craft.imager.serverSupportsWebp() -%}
+    {%- if craft.imager.clientSupportsWebp() -%}
+      {%- set transformedImage = craft.imager.transformImage(image, settings, { format: 'webp' }) -%}
+    {%- endif -%}
+  {%- endif -%}
+  {{- transformedImage.url -}}
+{%- endmacro -%}
+
+{%- macro imager_tag(settings) -%}
+	{% set supportsWebp = craft.imager.serverSupportsWebp() and craft.imager.clientSupportsWebp() %}
+	{% set focalPoint = settings.image.getFocalPoint() %}
+	{% set objectPosition = (focalPoint.x * 100) ~ '% ' ~ (focalPoint.y * 100) ~ '%' %}
+	{% set transformExtras = {
+		'format': supportsWebp ? 'webp' : 'jpeg',
+	}| merge(settings.extra | default({})) %}
+	{% set myAttributes = {
+    draggable: 'false',
+    data: {
+      'object-fit': settings.objectFit ?? 'cover',
+      'object-position': settings.objectPosition ?? objectPosition ?? 'center',
+			'original-width': settings.image.width,
+			'original-height': settings.image.height,
+    },
+    alt: settings.image.title,
+    class: settings.class | default(''),
+    srcset: craft.imager.srcset(craft.imager.transformImage(settings.image, 'default', transformExtras)),
+    sizes: settings.width | default('100vw'),
+    style: {
+      'object-fit': settings.objectFit ?? 'cover',
+      'object-position': settings.objectPosition ?? objectPosition ?? 'center',
+      'transform-origin': objectPosition ?? '50% 50%',
+    }
+  } %}
+	<img {{ attr(myAttributes) }}/>
+{%- endmacro -%}
+​
+{% macro square(img) %}
+	{% import _self as macros %}
+	{{ macros.imager_tag({
+		class: '',
+    image: img,
+		objectFit: 'cover',
+		objectPosition: 'center',
+    width: '100vw',
+		maxWidth: 3000,
+		interval: 500,
+    extra: {
+      ratio: 1
+    }
+  }) }}
+{% endmacro %}

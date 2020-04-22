@@ -1,0 +1,9 @@
+{% include ['_recaptcha/frontend'] %}
+<script>
+	window.recaptcha_success = function (response) {
+		console.log('Recaptcha works as expected', response);
+	};
+	window.recaptcha_failure = function (response) {
+		console.log('Recaptcha is not working', response);
+	};
+</script>

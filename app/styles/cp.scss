@@ -1,0 +1,52 @@
+@import "general/variables";
+@import "general/mixins";
+@import "general/typography";
+
+.redactor-dropdown-format .redactor-dropdown-item-colored {
+  @extend .primary-color;
+}
+
+.redactor-dropdown-format .redactor-dropdown-item-caps {
+  @extend .caps;
+}
+
+.primary-color {
+  color: $primary;
+}
+
+.full-redactor,
+.simple-redactor,
+.standard-redactor,
+.custom-redactor {
+  padding: 18px 16px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    margin: 0;
+  }
+
+  img{
+    width: 100%;
+  }
+
+  p{
+    margin-bottom: 1em;
+  }
+
+  ul{
+    margin: 1em;
+    list-style: disc inside;
+
+    li{
+      margin: 0.5em 0;
+    }
+  }
+
+  .caps {
+    @extend .caps;
+  }
+}
