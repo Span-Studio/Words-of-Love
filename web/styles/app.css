@@ -408,21 +408,21 @@ body {
 .width-1 {
   width: 13.33333vw; }
   .width-1 .spacer {
-    padding-bottom: 100%; }
+    padding-bottom: calc(100% - 0.8vw); }
   .width-1.featured {
     width: 26.66667vw; }
 
 .width-2 {
   width: 26.66667vw; }
   .width-2 .spacer {
-    padding-bottom: 50%; }
+    padding-bottom: calc(50% - 0.8vw); }
   .width-2.featured {
     width: 53.33333vw; }
 
 .width-3 {
   width: 40vw; }
   .width-3 .spacer {
-    padding-bottom: 33.333%; }
+    padding-bottom: calc(33.333% - 0.8vw); }
   .width-3.featured {
     width: 80vw; }
 

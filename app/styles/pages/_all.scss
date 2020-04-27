@@ -19,7 +19,7 @@ body {
   width: $grid-unit;
 
   .spacer {
-    padding-bottom: 100%;
+    padding-bottom: calc(100% - #{$grid-gutter});
   }
 
   &.featured {
@@ -31,7 +31,7 @@ body {
   width: $grid-unit * 2;
 
   .spacer {
-    padding-bottom: 50%;
+    padding-bottom: calc(50% - #{$grid-gutter});
   }
 
   &.featured {
@@ -43,7 +43,7 @@ body {
   width: $grid-unit * 3;
 
   .spacer {
-    padding-bottom: 33.333%;
+    padding-bottom: calc(33.333% - #{$grid-gutter});
   }
 
   &.featured {
