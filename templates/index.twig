@@ -5,31 +5,32 @@
 {% block content %}
 <div class="page-grid">
 	{% for block in entry.pageBlocks.all() %}
-	{% switch block.type.handle %}
-		{% case "image" %}
-			{% switch block.ratio.value %}
-				{% case 11 %}
-					{% set sizeClass = 'width-1 height-1' %}
-					{% set extraSettings = {
-						ratio: 1
-					} %}
-				{% case 21 %}
-					{% set sizeClass = 'width-2 height-1' %}
-					{% set extraSettings = {
-						ratio: 2
-					} %}
-				{% case 31 %}
-					{% set sizeClass = 'width-3 height-1' %}
-					{% set extraSettings = {
-						ratio: 3
-					} %}
-				{% default %}
-					{% set sizeClass = 'width-1 height-1' %}
-					{% set extraSettings = {
-						ratio: 1
-					} %}
-			{% endswitch %}
-			<div class="item pictures {{ sizeClass }}">
+		{% switch block.ratio.value %}
+			{% case 11 %}
+				{% set sizeClass = 'width-1 height-1' %}
+				{% set extraSettings = {
+					ratio: 1
+				} %}
+			{% case 21 %}
+				{% set sizeClass = 'width-2 height-1' %}
+				{% set extraSettings = {
+					ratio: 2
+				} %}
+			{% case 31 %}
+				{% set sizeClass = 'width-3 height-1' %}
+				{% set extraSettings = {
+					ratio: 3
+				} %}
+			{% default %}
+				{% set sizeClass = 'width-1 height-1' %}
+				{% set extraSettings = {
+					ratio: 1
+				} %}
+		{% endswitch %}
+
+		<div class="item {{ block.type.handle }} {{ sizeClass }} {{ block.isFeatured ? 'featured' }}">
+		{% switch block.type.handle %}
+			{% case "image" %}
 				{% for picture in block.assets.all() %}
 					{{ macros.imager_tag({
 						class: 'picture',
@@ -37,27 +38,12 @@
 						width: '100vw',
 						extra: extraSettings
 					}) }}
-				{% endfor %}
-			</div>
-		{% case "blankSpace" %}
-			{% switch block.ratio.value %}
-				{% case 11 %}
-					{% set sizeClass = 'width-1 height-1' %}
-				{% case 21 %}
-					{% set sizeClass = 'width-2 height-1' %}
-				{% case 31 %}
-					{% set sizeClass = 'width-3 height-1' %}
-				{% default %}
-					{% set sizeClass = 'width-1 height-1' %}
-			{% endswitch %}
-			<div class="item blankSpace {{ sizeClass }}"></div>
-		{% case "video" %}
-		
-	
-		{% default %}
-		
-	
-	{% endswitch %}
+				{% endfor %}				
+			{% case "video" %}
+					
+			{% default %}
+		{% endswitch %}
+		</div>
 	{% endfor %}
 </div>
 {% endblock %}
