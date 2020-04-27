@@ -196,15 +196,15 @@ nav.main-nav {
   position: fixed;
   top: 0;
   z-index: 10;
-  width: 60em;
-  justify-content: space-between;
-  padding: 1em; }
-  nav.main-nav .left {
-    width: 20em;
-    color: white; }
+  width: 80vw;
+  justify-content: space-between; }
   nav.main-nav svg {
-    width: 5em;
-    height: auto; }
+    display: block;
+    width: 6.66667vw;
+    height: auto;
+    padding: 0.8vw; }
+  nav.main-nav .right {
+    padding: 0.8vw; }
 
 .gallery {
   width: 100%; }
@@ -399,20 +399,32 @@ body {
 
 .layout {
   margin: 0 auto;
-  max-width: 60em;
-  margin-top: 7.25em; }
+  max-width: 80vw;
+  margin-top: 6.66667vw; }
+
+.page-grid .item {
+  padding: 0.8vw; }
 
 .width-1 {
-  width: 20em; }
+  width: 13.33333vw; }
+  .width-1 .spacer {
+    padding-bottom: 100%; }
+  .width-1.featured {
+    width: 26.66667vw; }
 
 .width-2 {
-  width: 40em; }
+  width: 26.66667vw; }
+  .width-2 .spacer {
+    padding-bottom: 50%; }
+  .width-2.featured {
+    width: 53.33333vw; }
 
 .width-3 {
-  width: 60em; }
-
-.height-1 {
-  height: 20em; }
+  width: 40vw; }
+  .width-3 .spacer {
+    padding-bottom: 33.333%; }
+  .width-3.featured {
+    width: 80vw; }
 
 .sr-only {
   position: absolute;

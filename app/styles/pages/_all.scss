@@ -4,25 +4,53 @@ body {
 
 .layout {
   margin: 0 auto;
-  max-width: 60em;
-  margin-top: 7.25em;
+  max-width: $grid-width;
+  margin-top: $grid-unit / 2;
 }
+
+.page-grid {
+  .item {
+    padding: $grid-gutter;
+  }
+}
+
 
 .width-1 {
   width: $grid-unit;
+
+  .spacer {
+    padding-bottom: 100%;
+  }
+
+  &.featured {
+    width: $grid-unit * 2;
+  }
 }
 
 .width-2 {
   width: $grid-unit * 2;
+
+  .spacer {
+    padding-bottom: 50%;
+  }
+
+  &.featured {
+    width: $grid-unit * 4;
+  }
 }
 
 .width-3 {
   width: $grid-unit * 3;
+
+  .spacer {
+    padding-bottom: 33.333%;
+  }
+
+  &.featured {
+    width: $grid-unit * 6;
+  }
 }
 
-.height-1 {
-  height: $grid-unit;
-}
 
 .sr-only {
   position: absolute;

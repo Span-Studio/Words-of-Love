@@ -3,8 +3,9 @@ $white: #fff;
 $primary: red;
 
 $padding: 1em;
-$grid-width: 60em;
-$grid-unit: $grid-width / 3;
+$grid-width: 80vw;
+$grid-unit: $grid-width / 6;
+$grid-gutter: $grid-width / 100;
 
 $max-section-height: 90vh;
 
