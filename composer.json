@@ -46,7 +46,8 @@
     "verbb/super-table": "^2.0.10",
     "vlucas/phpdotenv": "^2.4.0",
     "wbrowar/guide": "2.1.3.3",
-    "wbrowar/adminbar": "^3.1"
+    "wbrowar/adminbar": "^3.1",
+    "spacecatninja/imager-x": "^3.0"
   },
   "autoload": {
     "psr-4": {

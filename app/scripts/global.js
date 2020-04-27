@@ -1,6 +1,5 @@
 'use strict';
 
-
 // require('intersection-observer');
 // var Scrollama = require('scrollama');
 const _ = require('lodash');
@@ -15,7 +14,7 @@ class Global {
 
   // prevent a cross-site hack where they can impersonate your website
   addNoopener() {
-    $('a[target="_blank"]').each(function() {
+    $('a[target="_blank"]').each(function () {
       $(this).attr('rel', 'noopener');
     });
   }
@@ -24,7 +23,7 @@ class Global {
   // we add a class to the website which will help
   // clearly highlight what is currently active
   checkForTab() {
-    $('body').keydown(function(e) {
+    $('body').keydown(function (e) {
       if (e.originalEvent.keyCode === 9) {
         $('body').addClass('outlines');
       }
@@ -32,11 +31,11 @@ class Global {
   }
 
   forms() {
-    $('form input').focus(function() {
+    $('form input').focus(function () {
       const $this = $(this);
       $this.parent().addClass('active');
     });
-    $('form input').blur(function() {
+    $('form input').blur(function () {
       const $this = $(this);
       if ($this.val() === '') {
         $this.parent().removeClass('active');
@@ -44,7 +43,7 @@ class Global {
     });
 
     const $form = $('form');
-    $form.submit(function(event) {
+    $form.submit(function (event) {
       if (!$form.data('default')) {
         event.preventDefault();
         const data = $form.serialize();
@@ -57,7 +56,7 @@ class Global {
           headers: {
             'accept': 'application/javascript',
           },
-          complete: function(response, textStatus) {
+          complete: function (response, textStatus) {
             console.log("Status: " + textStatus, response);
             if (response.status === 302 || response.status === 200) {
               $form.hide();
@@ -70,14 +69,14 @@ class Global {
   }
 
   navigation() {
-    $('.hamburger').click(function() {
+    $('.hamburger').click(function () {
       $('body').toggleClass('nav-active');
     });
   }
 
   jumpToTop() {
     const _this = this;
-    $('a[href^="#"]').click(function(event) {
+    $('a[href^="#"]').click(function (event) {
       event.preventDefault();
       const href = $(this).attr('href');
       if (href == "#jump-to-top") {
@@ -90,7 +89,7 @@ class Global {
   }
 
   clearLast() {
-    $('.clear-last').each(function() {
+    $('.clear-last').each(function () {
       const $q = $(this).find('> *');
       $q.eq($q.length - 1).addClass('last');
     });
@@ -103,6 +102,7 @@ class Global {
     this.forms();
     this.jumpToTop();
     this.clearLast();
+
   }
 }
 

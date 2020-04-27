@@ -162,8 +162,8 @@ module.exports = {
 };
 });
 
-require.alias("brunch/node_modules/buffer/index.js", "buffer");
-require.alias("brunch/node_modules/process/browser.js", "process");process = require('process');require.register("___globals___", function(exports, require, module) {
+require.alias("buffer/index.js", "buffer");
+require.alias("process/browser.js", "process");process = require('process');require.register("___globals___", function(exports, require, module) {
   
 });})();require('___globals___');
 

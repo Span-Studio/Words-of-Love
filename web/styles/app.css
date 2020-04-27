@@ -191,6 +191,22 @@ textarea {
 iframe {
   display: block; }
 
+nav.main-nav {
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 60em;
+  justify-content: space-between;
+  padding: 1em; }
+  nav.main-nav .left {
+    width: 20em;
+    color: white; }
+  nav.main-nav svg {
+    width: 5em;
+    height: auto;
+    margin-bottom: 1em; }
+
 .gallery {
   width: 100%; }
   .gallery .slide {
@@ -251,7 +267,7 @@ iframe {
     top: 50%;
     transform: translateY(-8px) rotate(-135deg); }
   .hamburger .bar {
-    background: black; }
+    background: white; }
 
 .loading {
   margin: 100px auto;
@@ -356,7 +372,7 @@ iframe {
     top: 50%;
     transform: translateY(-8px) rotate(-135deg); }
   .hamburger .bar {
-    background: black; }
+    background: white; }
 
 .button {
   width: auto;
@@ -379,8 +395,14 @@ iframe {
   height: auto;
   margin: 0 auto; }
 
+body {
+  background: #000; }
+
 .layout {
-  margin: 0 auto; }
+  margin: 0 auto;
+  max-width: 60em;
+  height: 10000vh;
+  margin-top: 8em; }
 
 .sr-only {
   position: absolute;

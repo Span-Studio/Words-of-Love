@@ -1,5 +1,12 @@
+body {
+  background: $black;
+}
+
 .layout {
   margin: 0 auto;
+  max-width: 60em;
+  height: 10000vh;
+  margin-top: 8em;
 }
 
 .sr-only {

@@ -1,1 +1,21 @@
-nav.main-nav { }
+nav.main-nav {
+
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 60em;
+  justify-content: space-between;
+  padding: $padding;
+
+  .left {
+    width: 20em;
+    color: white;
+  }
+
+  svg {
+    width: 5em;
+    height: auto;
+    margin-bottom: 1em;
+  }
+}

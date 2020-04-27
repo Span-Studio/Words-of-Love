@@ -41,6 +41,7 @@
     "flickity-imagesloaded": "^2.0.0",
     "imagesloaded": "^4.1.4",
     "intersection-observer": "^0.5.1",
+    "isotope-layout": "^3.0.6",
     "jquery": "^3.4.1",
     "js-cookie": "^2.2.0",
     "leaflet": "^1.6.0",

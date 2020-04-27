@@ -3,5 +3,31 @@
 {% set body_classes = 'home-page' %}
 
 {% block content %}
-	{% include "includes/_recaptcha" %}
+<div class="page-grid">
+	{% for block in entry.pageBlocks.all() %}
+	{% switch block.type.handle %}
+		{% case "image" %}
+			<div class="item {{ block.type.handle }} {{ block.ratio }}">
+			{% for picture in block.assets.all() %}
+				{{ macros.imager_tag({
+					class: 'picture',
+					image: picture,
+					width: '100vw',
+					extra: {
+						ratio: 1
+					}
+				}) }}
+			{% endfor %}
+			</div>
+		{% case "blankSpace" %}
+
+		{% case "video" %}
+		
+	
+		{% default %}
+		
+	
+	{% endswitch %}
+	{% endfor %}
+</div>
 {% endblock %}

@@ -42,12 +42,8 @@
 
 <body class="{{body_classes | default('default-page')}} {{ craft.app.request.isMobileBrowser ? 'mobile' : 'desktop' }}">
 
-	{% if plugin('admin-bar') %}
-	{{ adminbar() }}
-	{% endif %}
-
 	<div id="viewport">
-		{% include 'includes/_loading' %}
+		{# include 'includes/_loading' #}
 		<div class="layout">
 			{% include 'includes/_nav' %}
 			{% include 'includes/_header' %}
@@ -56,14 +52,15 @@
 		</div>
 	</div>
 
+	{% if not devMode %}
 	<script>
 		window.brunch = window.brunch || {};
 		window.brunch['auto-reload'] = window.brunch['auto-reload'] || {};
 		window.brunch['auto-reload'].disabled = false;
 	</script>
+	{% endif %}
 
 	<script type="text/javascript" src="/scripts/vendor.js{{ cache }}"></script>
 	<script type="text/javascript" src="/scripts/app.js{{ cache }}"></script>
 </body>
-
 </html>
