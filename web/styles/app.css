@@ -204,8 +204,7 @@ nav.main-nav {
     color: white; }
   nav.main-nav svg {
     width: 5em;
-    height: auto;
-    margin-bottom: 1em; }
+    height: auto; }
 
 .gallery {
   width: 100%; }
@@ -401,8 +400,19 @@ body {
 .layout {
   margin: 0 auto;
   max-width: 60em;
-  height: 10000vh;
-  margin-top: 8em; }
+  margin-top: 7.25em; }
+
+.width-1 {
+  width: 20em; }
+
+.width-2 {
+  width: 40em; }
+
+.width-3 {
+  width: 60em; }
+
+.height-1 {
+  height: 20em; }
 
 .sr-only {
   position: absolute;

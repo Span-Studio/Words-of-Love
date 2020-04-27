@@ -5,7 +5,7 @@ const Pages = require('./pages.js');
 const Videos = require('./videos.js');
 const Galeries = require('./galeries.js');
 const Components = require('./components.js');
-
+const Isotope = require('isotope-layout');
 const _ = require('lodash');
 
 
@@ -21,7 +21,6 @@ let init = function () {
 
     var iso = new Isotope($('.page-grid')[0], {
       itemSelector: '.item',
-      layoutMode: 'fitRows'
     });
 
     console.log(iso);

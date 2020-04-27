@@ -7,20 +7,50 @@
 	{% for block in entry.pageBlocks.all() %}
 	{% switch block.type.handle %}
 		{% case "image" %}
-			<div class="item {{ block.type.handle }} {{ block.ratio }}">
-			{% for picture in block.assets.all() %}
-				{{ macros.imager_tag({
-					class: 'picture',
-					image: picture,
-					width: '100vw',
-					extra: {
+			{% switch block.ratio.value %}
+				{% case 11 %}
+					{% set sizeClass = 'width-1 height-1' %}
+					{% set extraSettings = {
 						ratio: 1
-					}
-				}) }}
-			{% endfor %}
+					} %}
+				{% case 21 %}
+					{% set sizeClass = 'width-2 height-1' %}
+					{% set extraSettings = {
+						ratio: 2
+					} %}
+				{% case 31 %}
+					{% set sizeClass = 'width-3 height-1' %}
+					{% set extraSettings = {
+						ratio: 3
+					} %}
+				{% default %}
+					{% set sizeClass = 'width-1 height-1' %}
+					{% set extraSettings = {
+						ratio: 1
+					} %}
+			{% endswitch %}
+			<div class="item pictures {{ sizeClass }}">
+				{% for picture in block.assets.all() %}
+					{{ macros.imager_tag({
+						class: 'picture',
+						image: picture,
+						width: '100vw',
+						extra: extraSettings
+					}) }}
+				{% endfor %}
 			</div>
 		{% case "blankSpace" %}
-
+			{% switch block.ratio.value %}
+				{% case 11 %}
+					{% set sizeClass = 'width-1 height-1' %}
+				{% case 21 %}
+					{% set sizeClass = 'width-2 height-1' %}
+				{% case 31 %}
+					{% set sizeClass = 'width-3 height-1' %}
+				{% default %}
+					{% set sizeClass = 'width-1 height-1' %}
+			{% endswitch %}
+			<div class="item blankSpace {{ sizeClass }}"></div>
 		{% case "video" %}
 		
 	

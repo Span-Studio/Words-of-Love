@@ -5,8 +5,23 @@ body {
 .layout {
   margin: 0 auto;
   max-width: 60em;
-  height: 10000vh;
-  margin-top: 8em;
+  margin-top: 7.25em;
+}
+
+.width-1 {
+  width: $grid-unit;
+}
+
+.width-2 {
+  width: $grid-unit * 2;
+}
+
+.width-3 {
+  width: $grid-unit * 3;
+}
+
+.height-1 {
+  height: $grid-unit;
 }
 
 .sr-only {
