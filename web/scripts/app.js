@@ -46017,9 +46017,9 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var VimeoPlayer = require('@vimeo/player');
+var VimeoPlayer = require("@vimeo/player");
 
-var YouTubePlayer = require('youtube-player'); // https://github.com/vimeo/player.js/
+var YouTubePlayer = require("youtube-player"); // https://github.com/vimeo/player.js/
 // <div class="vimeo-video" data-id=""></div>
 
 
@@ -46040,7 +46040,7 @@ function () {
 
           var _condition = self.ratio.b > ratio;
 
-          if (self.objectFit == 'contain') {
+          if (self.objectFit == "contain") {
             _condition = self.ratio.a < ratio;
           }
 
@@ -46048,16 +46048,16 @@ function () {
             // bind height
             var unit = Math.ceil(self.el.innerHeight());
             self.el.css({
-              'width': unit / ratio,
-              'height': unit
+              width: unit / ratio,
+              height: unit
             });
           } else {
             // bind width
             var _unit = Math.ceil(self.el.innerWidth());
 
             self.el.css({
-              'width': _unit,
-              'height': _unit * ratio
+              width: _unit,
+              height: _unit * ratio
             });
           }
         };
@@ -46078,9 +46078,9 @@ function () {
       a: 0.5625,
       b: 0.75
     };
-    this.id = this.el.data('id');
-    this.background = this.el.hasClass('background');
-    this.objectFit = 'contain';
+    this.id = this.el.data("id");
+    this.background = this.el.hasClass("background");
+    this.objectFit = "contain";
     var options = {
       id: this.id,
       width: this.el.innerWidth(),
@@ -46109,15 +46109,15 @@ var Youtube = function Youtube(el) {
   var $this = $(el);
   var ratio = 0.5625; // 16:9
 
-  this.background = $this.hasClass('background');
+  this.background = $this.hasClass("background");
   this.player = YouTubePlayer(el, {
     width: $this.innerWidth(),
     height: $this.innerWidth() * ratio,
-    videoId: $this.data('id'),
+    videoId: $this.data("id"),
     autoplay: this.background ? 1 : 0,
     controls: this.background ? 0 : 1
   });
-  this.player.on('ready', function (event) {
+  this.player.on("ready", function (event) {
     var $player = $(event.target.getIframe());
 
     var calc = function calc() {
