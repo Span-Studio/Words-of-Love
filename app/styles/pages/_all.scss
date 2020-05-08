@@ -36,11 +36,15 @@ body {
   width: $grid-unit;
 
   .spacer {
-    padding-bottom: calc(100% - #{$grid-gutter});
+    height: #{$grid-unit - ($grid-gutter * 2)};
   }
 
   &.featured {
     width: $grid-unit * 2;
+
+    .spacer {
+      height: #{$grid-unit * 2 - ($grid-gutter * 2)};
+    }
   }
 }
 
@@ -48,11 +52,16 @@ body {
   width: $grid-unit * 2;
 
   .spacer {
-    padding-bottom: calc(50% - #{$grid-gutter});
+    // padding-bottom: calc(50% - #{$grid-gutter});
+    height: #{$grid-unit - ($grid-gutter * 2)};
   }
 
   &.featured {
     width: $grid-unit * 4;
+
+    .spacer {
+      height: #{$grid-unit * 2 - ($grid-gutter * 2)};
+    }
   }
 }
 
@@ -60,11 +69,16 @@ body {
   width: $grid-unit * 3;
 
   .spacer {
-    padding-bottom: calc(33.333% - #{$grid-gutter});
+    // padding-bottom: calc(33.333% - #{$grid-gutter * 2});
+    height: #{$grid-unit - ($grid-gutter * 2)};
   }
 
   &.featured {
     width: $grid-unit * 6;
+
+    .spacer {
+      height: #{$grid-unit * 2 - ($grid-gutter * 2)};
+    }
   }
 }
 
