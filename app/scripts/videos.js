@@ -55,7 +55,7 @@ class Vimeo {
     this.background = this.el.hasClass("background");
     this.objectFit = "contain";
 
-    const options = {
+    let options = {
       id: this.id,
       width: this.el.innerWidth(),
       loop: false,

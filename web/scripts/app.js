@@ -46009,8 +46009,6 @@ module.exports = {
 require.register("scripts/videos.js", function(exports, require, module) {
 "use strict";
 
-function _readOnlyError(name) { throw new Error("\"" + name + "\" is read-only"); }
-
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
@@ -46089,10 +46087,10 @@ function () {
     };
 
     if (this.background) {
-      options = (_readOnlyError("options"), Object.assign(options, {
+      options = Object.assign(options, {
         muted: true,
         controls: false
-      }));
+      });
     }
 
     this.player = new VimeoPlayer(el, options);
