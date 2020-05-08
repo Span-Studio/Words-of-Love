@@ -6,11 +6,11 @@ nav.main-nav {
   width: $grid-width;
   justify-content: space-between;
 
-  svg {
+
+  .logo {
     display: block;
-    width: $grid-unit / 2;
+    width: $grid-unit;
     height: auto;
-    padding: $grid-gutter;
   }
 
   .right {

@@ -2,13 +2,30 @@ body {
   background: $black;
 }
 
+#viewport {
+  transform: translateY(1em);
+}
+
 .layout {
   margin: 0 auto;
   max-width: $grid-width;
-  margin-top: $grid-unit / 2;
+
+  // margin-top: $grid-unit * 2;
+}
+
+.page-squares {
+  display: flex;
+  flex-wrap: wrap;
+
+  .item {
+    width: $grid-unit * 2;
+    margin: 1em 0;
+  }
 }
 
 .page-grid {
+  display: none;
+
   .item {
     padding: $grid-gutter;
   }

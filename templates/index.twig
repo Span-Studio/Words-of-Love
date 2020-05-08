@@ -3,49 +3,70 @@
 {% set body_classes = 'home-page' %}
 
 {% block content %}
-<div class="page-grid">
-	{% for block in entry.pageBlocks.all() %}
-		{% switch block.ratio.value %}
-			{% case 11 %}
-				{% set sizeClass = 'width-1 height-1' %}
-				{% set extraSettings = {
+
+	<div class="page-squares">
+		{% for s in entry.pageSquares.all() %}
+			<div class="item {{ s.type.handle }}">
+				{% switch s.type.handle %}
+					{% case "picture" %}
+						{{ macros.imager_tag({
+							image: s.asset.one(),
+							width: '33.333vw',
+						}) }}
+					{% case "video" %}
+						<div class="vimeo-video" data-id="{{ s.vimeoId }}"></div>
+					{% case "space" %}
+
+					{% default %}
+				{% endswitch %}
+
+			</div>
+		{% endfor %}
+	</div>
+
+	<div class="page-grid">
+		{% for block in entry.pageBlocks.all() %}
+			{% switch block.ratio.value %}
+				{% case 11 %}
+					{% set sizeClass = 'width-1 height-1' %}
+					{% set extraSettings = {
 					ratio: 1
 				} %}
-			{% case 21 %}
-				{% set sizeClass = 'width-2 height-1' %}
-				{% set extraSettings = {
+				{% case 21 %}
+					{% set sizeClass = 'width-2 height-1' %}
+					{% set extraSettings = {
 					ratio: 2
 				} %}
-			{% case 31 %}
-				{% set sizeClass = 'width-3 height-1' %}
-				{% set extraSettings = {
+				{% case 31 %}
+					{% set sizeClass = 'width-3 height-1' %}
+					{% set extraSettings = {
 					ratio: 3
 				} %}
-			{% default %}
-				{% set sizeClass = 'width-1 height-1' %}
-				{% set extraSettings = {
+				{% default %}
+					{% set sizeClass = 'width-1 height-1' %}
+					{% set extraSettings = {
 					ratio: 1
 				} %}
-		{% endswitch %}
+			{% endswitch %}
 
-		<div class="item {{ block.type.handle }} {{ sizeClass }} {{ block.isFeatured ? 'featured' }}">
-		{% switch block.type.handle %}
-			{% case "image" %}
-				{% for picture in block.assets.all() %}
-					{{ macros.imager_tag({
+			<div class="item {{ block.type.handle }} {{ sizeClass }} {{ block.isFeatured ? 'featured' }}">
+				{% switch block.type.handle %}
+					{% case "image" %}
+						{% for picture in block.assets.all() %}
+							{{ macros.imager_tag({
 						class: 'picture',
 						image: picture,
 						width: '100vw',
 						extra: extraSettings
 					}) }}
-				{% endfor %}				
-			{% case "blankSpace" %}
-				<div class="spacer"></div>
-			{% case "video" %}
-					
-			{% default %}
-		{% endswitch %}
-		</div>
-	{% endfor %}
-</div>
+						{% endfor %}
+					{% case "blankSpace" %}
+						<div class="spacer"></div>
+					{% case "video" %}
+
+					{% default %}
+				{% endswitch %}
+			</div>
+		{% endfor %}
+	</div>
 {% endblock %}

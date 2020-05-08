@@ -198,11 +198,10 @@ nav.main-nav {
   z-index: 10;
   width: 80vw;
   justify-content: space-between; }
-  nav.main-nav svg {
+  nav.main-nav .logo {
     display: block;
-    width: 6.66667vw;
-    height: auto;
-    padding: 0.8vw; }
+    width: 13.33333vw;
+    height: auto; }
   nav.main-nav .right {
     padding: 0.8vw; }
 
@@ -397,13 +396,24 @@ nav.main-nav {
 body {
   background: #000; }
 
+#viewport {
+  transform: translateY(1em); }
+
 .layout {
   margin: 0 auto;
-  max-width: 80vw;
-  margin-top: 6.66667vw; }
+  max-width: 80vw; }
 
-.page-grid .item {
-  padding: 0.8vw; }
+.page-squares {
+  display: flex;
+  flex-wrap: wrap; }
+  .page-squares .item {
+    width: 26.66667vw;
+    margin: 1em 0; }
+
+.page-grid {
+  display: none; }
+  .page-grid .item {
+    padding: 0.8vw; }
 
 .width-1 {
   width: 13.33333vw; }
