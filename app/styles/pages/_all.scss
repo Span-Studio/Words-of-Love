@@ -21,6 +21,10 @@ body {
     width: $grid-unit * 2;
     margin: 1em 0;
   }
+
+  .vimeo-video {
+    height: 100%;
+  }
 }
 
 .page-grid {

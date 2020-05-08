@@ -409,6 +409,8 @@ body {
   .page-squares .item {
     width: 26.66667vw;
     margin: 1em 0; }
+  .page-squares .vimeo-video {
+    height: 100%; }
 
 .page-grid {
   display: none; }
