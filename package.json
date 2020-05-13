@@ -1,7 +1,7 @@
 {
-  "name": "craft-dev",
+  "name": "words-of-love",
   "version": "1.0.0",
-  "description": "A Craft 3.0 website",
+  "description": "A Craft website to display Words of Love during the cov19 pandemic.",
   "main": "brunch-config.js",
   "private": true,
   "publishConfig": {
@@ -31,7 +31,7 @@
     "brunch": "^2.10.12",
     "javascript-brunch": "^2.10.0",
     "postcss-brunch": "^2.10.1",
-    "sass-brunch": "^2.10.8",
+    "sass-brunch": "^3",
     "terser-brunch": "^3.0.0"
   },
   "dependencies": {
