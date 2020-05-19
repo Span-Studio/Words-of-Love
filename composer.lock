@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "aws/aws-sdk-php",
-            "version": "3.137.7",
+            "version": "3.138.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aws/aws-sdk-php.git",
-                "reference": "d5f278f3b2a65a520ca3317f5099c1dac5ca26d8"
+                "reference": "2294604d4edb967249c4e41ab775a72d6baa247a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/d5f278f3b2a65a520ca3317f5099c1dac5ca26d8",
-                "reference": "d5f278f3b2a65a520ca3317f5099c1dac5ca26d8",
+                "url": "https://api.github.com/repos/aws/aws-sdk-php/zipball/2294604d4edb967249c4e41ab775a72d6baa247a",
+                "reference": "2294604d4edb967249c4e41ab775a72d6baa247a",
                 "shasum": ""
             },
             "require": {
@@ -88,7 +88,7 @@
                 "s3",
                 "sdk"
             ],
-            "time": "2020-05-11T18:11:25+00:00"
+            "time": "2020-05-19T18:15:45+00:00"
         },
         {
             "name": "cakephp/core",
@@ -585,16 +585,16 @@
         },
         {
             "name": "craftcms/cms",
-            "version": "3.4.18",
+            "version": "3.4.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/cms.git",
-                "reference": "0d182fa2d16ad49aa68cf3037ed80c63b0ed1745"
+                "reference": "a4e4ae5ce7b067f31d00c27770bc3e7c8434ba91"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/cms/zipball/0d182fa2d16ad49aa68cf3037ed80c63b0ed1745",
-                "reference": "0d182fa2d16ad49aa68cf3037ed80c63b0ed1745",
+                "url": "https://api.github.com/repos/craftcms/cms/zipball/a4e4ae5ce7b067f31d00c27770bc3e7c8434ba91",
+                "reference": "a4e4ae5ce7b067f31d00c27770bc3e7c8434ba91",
                 "shasum": ""
             },
             "require": {
@@ -646,11 +646,12 @@
                 "bower-asset/yii2-pjax": "~2.0.1"
             },
             "require-dev": {
-                "codeception/codeception": "^3.1.0",
-                "codeception/mockery-module": "^0.3",
-                "codeception/phpunit-wrapper": "^7.7",
-                "codeception/specify": "^0.4",
-                "codeception/verify": "^1.0",
+                "codeception/codeception": "^4.0.0",
+                "codeception/module-asserts": "^1.0.0",
+                "codeception/module-datafactory": "^1.0.0",
+                "codeception/module-phpbrowser": "^1.0.0",
+                "codeception/module-rest": "^1.0.0",
+                "codeception/module-yii2": "^1.0.0",
                 "fzaninotto/faker": "^1.8",
                 "league/factory-muffin": "^3.0",
                 "vlucas/phpdotenv": "^3.0"
@@ -678,7 +679,7 @@
                 "craftcms",
                 "yii2"
             ],
-            "time": "2020-05-05T17:00:32+00:00"
+            "time": "2020-05-18T15:31:36+00:00"
         },
         {
             "name": "craftcms/element-api",
@@ -731,16 +732,16 @@
         },
         {
             "name": "craftcms/feed-me",
-            "version": "4.2.2",
+            "version": "4.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/craftcms/feed-me.git",
-                "reference": "0a86a4746facbf3750bd260f83eb8d8dfe990dd9"
+                "reference": "3871dfadaac0619c99f825d63dba5a7f1485100b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/craftcms/feed-me/zipball/0a86a4746facbf3750bd260f83eb8d8dfe990dd9",
-                "reference": "0a86a4746facbf3750bd260f83eb8d8dfe990dd9",
+                "url": "https://api.github.com/repos/craftcms/feed-me/zipball/3871dfadaac0619c99f825d63dba5a7f1485100b",
+                "reference": "3871dfadaac0619c99f825d63dba5a7f1485100b",
                 "shasum": ""
             },
             "require": {
@@ -788,7 +789,7 @@
                 "craftcms",
                 "feed me"
             ],
-            "time": "2020-03-26T22:46:40+00:00"
+            "time": "2020-05-12T19:20:49+00:00"
         },
         {
             "name": "craftcms/oauth2-craftid",
@@ -1509,16 +1510,16 @@
         },
         {
             "name": "google/auth",
-            "version": "v1.8.0",
+            "version": "v1.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/googleapis/google-auth-library-php.git",
-                "reference": "c7b295feb248f138f462a1e6b7d635e4244204c5"
+                "reference": "af4abf63988b8c74f589bee1e69ba310d3e43c6c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/c7b295feb248f138f462a1e6b7d635e4244204c5",
-                "reference": "c7b295feb248f138f462a1e6b7d635e4244204c5",
+                "url": "https://api.github.com/repos/googleapis/google-auth-library-php/zipball/af4abf63988b8c74f589bee1e69ba310d3e43c6c",
+                "reference": "af4abf63988b8c74f589bee1e69ba310d3e43c6c",
                 "shasum": ""
             },
             "require": {
@@ -1530,12 +1531,12 @@
                 "psr/http-message": "^1.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^1.11",
                 "guzzlehttp/promises": "0.1.1|^1.3",
                 "kelvinmo/simplejwt": "^0.2.5",
                 "phpseclib/phpseclib": "^2",
                 "phpunit/phpunit": "^4.8.36|^5.7",
-                "sebastian/comparator": ">=1.2.3"
+                "sebastian/comparator": ">=1.2.3",
+                "squizlabs/php_codesniffer": "^3.5"
             },
             "suggest": {
                 "phpseclib/phpseclib": "May be used in place of OpenSSL for signing strings or for token management. Please require version ^2."
@@ -1557,7 +1558,7 @@
                 "google",
                 "oauth2"
             ],
-            "time": "2020-03-26T19:47:36+00:00"
+            "time": "2020-05-18T17:02:59+00:00"
         },
         {
             "name": "google/cloud-core",
@@ -2657,16 +2658,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.67",
+            "version": "1.0.69",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "5b1f36c75c4bdde981294c2a0ebdb437ee6f275e"
+                "reference": "7106f78428a344bc4f643c233a94e48795f10967"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/5b1f36c75c4bdde981294c2a0ebdb437ee6f275e",
-                "reference": "5b1f36c75c4bdde981294c2a0ebdb437ee6f275e",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/7106f78428a344bc4f643c233a94e48795f10967",
+                "reference": "7106f78428a344bc4f643c233a94e48795f10967",
                 "shasum": ""
             },
             "require": {
@@ -2743,7 +2744,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2020-04-16T13:21:26+00:00"
+            "time": "2020-05-18T15:13:39+00:00"
         },
         {
             "name": "league/fractal",
@@ -3673,16 +3674,16 @@
         },
         {
             "name": "nystudio107/craft-seomatic",
-            "version": "3.3.3",
+            "version": "3.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nystudio107/craft-seomatic.git",
-                "reference": "6792f283357609f3431bff401552a184f1fdf77b"
+                "reference": "f57b646a54ee768248b7aaad4ffe520c0fce860e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/6792f283357609f3431bff401552a184f1fdf77b",
-                "reference": "6792f283357609f3431bff401552a184f1fdf77b",
+                "url": "https://api.github.com/repos/nystudio107/craft-seomatic/zipball/f57b646a54ee768248b7aaad4ffe520c0fce860e",
+                "reference": "f57b646a54ee768248b7aaad4ffe520c0fce860e",
                 "shasum": ""
             },
             "require": {
@@ -3743,7 +3744,7 @@
                 "tags",
                 "twitter"
             ],
-            "time": "2020-05-12T17:09:43+00:00"
+            "time": "2020-05-19T02:41:02+00:00"
         },
         {
             "name": "nystudio107/craft-typogrify",
@@ -6400,16 +6401,16 @@
         },
         {
             "name": "verbb/field-manager",
-            "version": "2.1.5",
+            "version": "2.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/verbb/field-manager.git",
-                "reference": "2b301c84f2531b7ace5194f439d1710f3f3551e0"
+                "reference": "8caa3123207c62ce78985c7d163d990581608f09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/verbb/field-manager/zipball/2b301c84f2531b7ace5194f439d1710f3f3551e0",
-                "reference": "2b301c84f2531b7ace5194f439d1710f3f3551e0",
+                "url": "https://api.github.com/repos/verbb/field-manager/zipball/8caa3123207c62ce78985c7d163d990581608f09",
+                "reference": "8caa3123207c62ce78985c7d163d990581608f09",
                 "shasum": ""
             },
             "require": {
@@ -6446,7 +6447,7 @@
                 "craftcms",
                 "field manager"
             ],
-            "time": "2020-04-18T05:33:21+00:00"
+            "time": "2020-05-13T03:18:56+00:00"
         },
         {
             "name": "verbb/super-table",
@@ -6830,16 +6831,16 @@
         },
         {
             "name": "voku/portable-utf8",
-            "version": "5.4.42",
+            "version": "5.4.43",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-utf8.git",
-                "reference": "dcdb1d8fbda1ce3047bf2377558e8fea13bd1ae9"
+                "reference": "ca43fcf0d953909217565d6cbfa923053de0acdc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/dcdb1d8fbda1ce3047bf2377558e8fea13bd1ae9",
-                "reference": "dcdb1d8fbda1ce3047bf2377558e8fea13bd1ae9",
+                "url": "https://api.github.com/repos/voku/portable-utf8/zipball/ca43fcf0d953909217565d6cbfa923053de0acdc",
+                "reference": "ca43fcf0d953909217565d6cbfa923053de0acdc",
                 "shasum": ""
             },
             "require": {
@@ -6865,8 +6866,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "voku\\": "src/voku/",
-                    "voku\\tests\\": "tests/"
+                    "voku\\": "src/voku/"
                 },
                 "files": [
                     "bootstrap.php"
@@ -6922,7 +6922,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-05-05T09:53:26+00:00"
+            "time": "2020-05-14T00:59:19+00:00"
         },
         {
             "name": "voku/stop-words",
