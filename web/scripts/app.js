@@ -530,7 +530,10 @@ function () {
     if (this.background) {
       options = Object.assign(options, {
         muted: true,
-        background: true
+        background: true,
+        autoplay: true,
+        loop: true,
+        controls: false
       });
     }
 

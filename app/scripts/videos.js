@@ -66,6 +66,9 @@ class VimeoPlayer {
       options = Object.assign(options, {
         muted: true,
         background: true,
+        autoplay: true,
+        loop: true,
+        controls: false
       });
     }
 
