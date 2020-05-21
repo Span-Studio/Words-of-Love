@@ -3,7 +3,7 @@ body {
 }
 
 #viewport {
-  transform: translateY(1em);
+  // transform: translateY(1em);
 }
 
 .layout {
@@ -13,9 +13,17 @@ body {
   // margin-top: $grid-unit * 2;
 }
 
+.page-message {
+  position: absolute;
+  z-index: 100;
+  top: $grid-unit;
+  width: $grid-unit * 4;
+}
+
 .page-squares {
   display: flex;
   flex-wrap: wrap;
+  top: $grid-unit * 2;
 
   .item {
     width: $grid-unit * 2;

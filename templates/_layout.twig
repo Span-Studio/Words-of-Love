@@ -3,78 +3,76 @@
 
 <!DOCTYPE html>
 <html lang="en-US">
+	<head>
+		<script type="text/javascript" src="/scripts/pace.min.js{{ cache }}" async></script>
+		<style>
+			.pace {
+				pointer-events: none;
+				user-select: none;
+			}
 
-<head>
-	<script type="text/javascript" src="/scripts/pace.min.js{{ cache }}" async></script>
-	<style>
-		.pace {
-			pointer-events: none;
-			user-select: none;
-		}
+			.pace-inactive {
+				display: none;
+			}
 
-		.pace-inactive {
-			display: none;
-		}
+			.pace .pace-progress {
+				background: #000;
+				/** replace with primary color */
+				position: fixed;
+				z-index: 2000;
+				top: 0;
+				right: 100%;
+				width: 100%;
+				height: 3px;
+			}
+		</style>
 
-		.pace .pace-progress {
-			background: #000;
-			/** replace with primary color */
-			position: fixed;
-			z-index: 2000;
-			top: 0;
-			right: 100%;
-			width: 100%;
-			height: 3px;
-		}
-	</style>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="referrer" content="origin-when-cross-origin"/>
 
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="referrer" content="origin-when-cross-origin" />
+		<link rel="stylesheet" href="/styles/normalize.css{{ cache }}">
+		<link rel="stylesheet" href="/styles/flickity.min.css{{ cache }}">
+		<link rel="stylesheet" href="/styles/main.css{{ cache }}">
+	</head>
 
-	<link rel="stylesheet" href="/styles/vendor.css{{ cache }}">
-	<link rel="stylesheet" href="/styles/app.css{{ cache }}">
-</head>
+	<!-- Website developed by Span (https://span.studio) and Clark Nelson (https://clarknelson.com) -->
 
-<!-- Website developed by Span (https://span.studio) and Clark Nelson (https://clarknelson.com) -->
+	<body
+		class="{{body_classes | default('default-page')}} {{ craft.app.request.isMobileBrowser ? 'mobile' : 'desktop' }}">
 
-<body class="{{body_classes | default('default-page')}} {{ craft.app.request.isMobileBrowser ? 'mobile' : 'desktop' }}">
+		<!-- Event snippet for Website traffic conversion page -->
+		<script>
+			gtag('event', 'conversion', {'send_to': 'AW-635240522/qxULCPewodABEMqA9K4C'});
+		</script>
 
-	<!-- Event snippet for Website traffic conversion page -->
-	<script>
-		gtag('event', 'conversion', {'send_to': 'AW-635240522/qxULCPewodABEMqA9K4C'});
-	</script>
+		<!-- Global site tag (gtag.js) - Google Ads: 635240522 -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-635240522"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+function gtag() {
+dataLayer.push(arguments);
+}
+gtag('js', new Date());
+gtag('config', 'AW-635240522');
+		</script>
 
-	<!-- Global site tag (gtag.js) - Google Ads: 635240522 -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-635240522"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
-		gtag('config', 'AW-635240522');
-	</script>
-
-	<div id="viewport">
-		{# include 'includes/_loading' #}
-		<div class="layout">
-			{% include 'includes/_nav' %}
-			{% include 'includes/_header' %}
-			{% block content %}{% endblock %}
-			{% include 'includes/_footer' %}
+		<div
+			id="viewport">
+			{# include 'includes/_loading' #}
+			<div class="layout">
+				{% include 'includes/_nav' %}
+				{% include 'includes/_header' %}
+				{% block content %}{% endblock %}
+				{% include 'includes/_footer' %}
+			</div>
 		</div>
-	</div>
 
-	{% if not devMode %}
-	<script>
-		window.brunch = window.brunch || {};
-		window.brunch['auto-reload'] = window.brunch['auto-reload'] || {};
-		window.brunch['auto-reload'].disabled = false;
-	</script>
-	{% endif %}
-
-	<script type="text/javascript" src="/scripts/vendor.js{{ cache }}"></script>
-	<script type="text/javascript" src="/scripts/app.js{{ cache }}"></script>
-</body>
+		<script src="https://player.vimeo.com/api/player.js"></script>
+		<script type="text/javascript" src="/scripts/manifest.js{{ cache }}"></script>
+		<script type="text/javascript" src="/scripts/vendor.js{{ cache }}"></script>
+		<script type="text/javascript" src="/scripts/app.js{{ cache }}"></script>
+	</body>
 </html>

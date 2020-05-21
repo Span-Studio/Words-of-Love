@@ -3,7 +3,12 @@
 {% set body_classes = 'home-page' %}
 
 {% block content %}
-
+	<div class="page-message">
+		{{ macros.imager_tag({
+			image: globals.message.one(),
+			width: '33.333vw',
+		}) }}
+	</div>
 	<div class="page-squares">
 		{% for s in entry.pageSquares.all() %}
 			<div class="item {{ s.type.handle }}">

@@ -1,0 +1,11 @@
+{
+    "/web/scripts/app.js": "/web/scripts/app.js",
+    "/web/styles/main.css": "/web/styles/main.css",
+    "/web/styles/cp.css": "/web/styles/cp.css",
+    "/web/scripts/manifest.js": "/web/scripts/manifest.js",
+    "/web/scripts/vendor.js": "/web/scripts/vendor.js",
+    "/web/styles/flickity.min.css": "/web/styles/flickity.min.css",
+    "/web/styles/normalize.css": "/web/styles/normalize.css",
+    "/web/scripts/pace.min.js": "/web/scripts/pace.min.js",
+    "/web/scripts/objectFitPolyfill.basic.min.js": "/web/scripts/objectFitPolyfill.basic.min.js"
+}

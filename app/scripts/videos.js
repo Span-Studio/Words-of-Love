@@ -1,20 +1,21 @@
-const VimeoPlayer = require("@vimeo/player");
 const YouTubePlayer = require("youtube-player");
+const _ = require("lodash");
+const $ = require("jquery");
 
 // https://github.com/vimeo/player.js/
 // <div class="vimeo-video" data-id=""></div>
-class Vimeo {
+class VimeoPlayer {
   resizeHelper() {
     const self = this;
     Promise.all([
       this.player.getVideoWidth(),
       this.player.getVideoHeight(),
-    ]).then(function (dimensions) {
+    ]).then(function(dimensions) {
       var width = dimensions[0];
       var height = dimensions[1];
       var ratio = height / width;
 
-      const calc = function () {
+      const calc = function() {
         console.log(self, self.ratio.a, ratio);
         let _condition = self.ratio.b > ratio;
         if (self.objectFit == "contain") {
@@ -64,12 +65,11 @@ class Vimeo {
     if (this.background) {
       options = Object.assign(options, {
         muted: true,
-        controls: false,
+        background: true,
       });
     }
 
-    this.player = new VimeoPlayer(el, options);
-
+    this.player = new Vimeo.Player(el, options);
     this.resizeHelper();
   }
 }
@@ -104,7 +104,7 @@ class Youtube {
         );
       };
       $(window).resize(
-        window._.debounce(() => {
+        _.debounce(() => {
           calc();
         }, 100)
       );
@@ -114,6 +114,6 @@ class Youtube {
 }
 
 module.exports = {
-  Vimeo,
+  VimeoPlayer,
   Youtube,
 };

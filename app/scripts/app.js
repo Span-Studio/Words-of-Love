@@ -1,39 +1,37 @@
-'use strict';
+"use strict";
 
-const Global = require('./global.js');
-const Pages = require('./pages.js');
-const Videos = require('./videos.js');
-const Galeries = require('./galeries.js');
-const Components = require('./components.js');
-const Isotope = require('isotope-layout');
-const _ = require('lodash');
+const Global = require("./global.js");
+const Pages = require("./pages.js");
+const Videos = require("./videos.js");
+const Galeries = require("./galeries.js");
+const Components = require("./components.js");
+const Isotope = require("isotope-layout");
+const _ = require("lodash");
+const $ = require("jquery");
 
-
-let init = function () {
-
-
-  $(document).ready(function () { // run as soon as the javascript is ready
+let init = function() {
+  $(document).ready(function() {
+    // run as soon as the javascript is ready
     new Global();
 
-    if ($('.about-page').length) {
+    if ($(".about-page").length) {
       new Pages.About();
     }
 
-    var iso = new Isotope($('.page-grid')[0], {
-      itemSelector: '.item',
+    var iso = new Isotope($(".page-grid")[0], {
+      itemSelector: ".item",
     });
-
-    console.log(iso);
   });
 
-  $(window).on('load', function () { // run when all the assets have finished downloading
-    $('.gallery').each(function () {
+  $(window).on("load", function() {
+    // run when all the assets have finished downloading
+    $(".gallery").each(function() {
       new Galeries.Gallery(this);
     });
-    $('.vimeo-video').each(function () {
-      new Videos.Vimeo(this);
+    $(".vimeo-video").each(function() {
+      new Videos.VimeoPlayer(this);
     });
-    $('.youtube-video').each(function () {
+    $(".youtube-video").each(function() {
       new Videos.Youtube(this);
     });
   });
