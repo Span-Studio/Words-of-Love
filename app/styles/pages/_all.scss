@@ -30,8 +30,8 @@ body {
   .item {
     width: calc(#{$grid-unit * 2} - 2em);
     width: $grid-unit * 2;
-    margin: 1em 0;
-    padding: 0 1em;
+    // margin: 1em 0;
+    padding: 1em;
   }
 
   .ratio-1 {
@@ -41,7 +41,7 @@ body {
 
   .ratio-2 {
     width: calc(#{$grid-unit * 4} - 2em);
-    width: $grid-unit * 4;
+    // width: $grid-unit * 4;
   }
 
   .vimeo-video {

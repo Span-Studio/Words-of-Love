@@ -632,8 +632,7 @@ body {
 .page-squares .item {
   width: calc(26.6666666667vw - 2em);
   width: 26.6666666667vw;
-  margin: 1em 0;
-  padding: 0 1em;
+  padding: 1em;
 }
 
 .page-squares .ratio-1 {
@@ -643,7 +642,6 @@ body {
 
 .page-squares .ratio-2 {
   width: calc(53.3333333333vw - 2em);
-  width: 53.3333333333vw;
 }
 
 .page-squares .vimeo-video {
