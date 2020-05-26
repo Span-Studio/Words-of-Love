@@ -261,17 +261,6 @@ textarea {
 input::-webkit-input-placeholder,
 input:-ms-input-placeholder,
 input::-ms-input-placeholder,
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder,
-textarea:-ms-input-placeholder,
-textarea::-ms-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: white;
-}
-
-input::-webkit-input-placeholder,
-input:-ms-input-placeholder,
-input::-ms-input-placeholder,
 input::placeholder,
 textarea::-webkit-input-placeholder,
 textarea:-ms-input-placeholder,
@@ -286,9 +275,6 @@ iframe {
 
 nav.main-nav {
   display: flex;
-  position: fixed;
-  top: 0;
-  z-index: 10;
   width: 80vw;
   justify-content: space-between;
 }
@@ -623,27 +609,37 @@ body {
   background: #000;
 }
 
+#viewport {
+  padding: 1em 0;
+}
+
 .layout {
   margin: 0 auto;
   max-width: 80vw;
 }
 
 .page-message {
-  position: absolute;
-  z-index: 100;
-  top: 13.3333333333vw;
   width: 53.3333333333vw;
+  margin-top: -1em;
+  margin-bottom: 1em;
 }
 
 .page-squares {
   display: flex;
   flex-wrap: wrap;
-  top: 26.6666666667vw;
 }
 
 .page-squares .item {
   width: 26.6666666667vw;
   margin: 1em 0;
+}
+
+.page-squares .ratio-1 {
+  width: 26.6666666667vw;
+}
+
+.page-squares .ratio-2 {
+  width: 53.3333333333vw;
 }
 
 .page-squares .vimeo-video {

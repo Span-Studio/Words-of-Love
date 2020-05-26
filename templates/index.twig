@@ -11,22 +11,35 @@
 	</div>
 	<div class="page-squares">
 		{% for s in entry.pageSquares.all() %}
-			<div class="item {{ s.type.handle }}">
-				{% switch s.type.handle %}
-					{% case "picture" %}
+			{% switch s.type.handle %}
+				{% case "picture" %}
+					{% set picture = s.asset.one() %}
+					{% set picture_ratio = picture.width / picture.height %}
+					{% set picture_color = craft.imager.getDominantColor(picture) %}
+					<div class="item picture ratio-{{picture_ratio}}" data-background="{{picture_color}}">
 						{{ macros.imager_tag({
-							image: s.asset.one(),
+							image: picture,
 							width: '33.333vw',
+							extra: {
+								ratio: picture_ratio
+							}
 						}) }}
-					{% case "video" %}
-						<div class="vimeo-video background" data-id="{{ s.vimeoId }}"></div>
-					{% case "space" %}
+					</div>
 
-					{% default %}
-				{% endswitch %}
+				{% case "video" %}
+					<div class="item video ratio-1">
+						<div class="vimeo-video background ratio-1" data-id="{{ s.vimeoId }}"></div>
+					</div>
 
-			</div>
+
+				{% case "space" %}
+
+				{% default %}
+			{% endswitch %}
+
 		{% endfor %}
+
+
 	</div>
 
 	<div class="page-grid">

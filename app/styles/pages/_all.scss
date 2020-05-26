@@ -4,36 +4,49 @@ body {
 
 #viewport {
   // transform: translateY(1em);
+  padding: 1em 0;
 }
 
 .layout {
   margin: 0 auto;
   max-width: $grid-width;
-
   // margin-top: $grid-unit * 2;
 }
 
 .page-message {
-  position: absolute;
-  z-index: 100;
-  top: $grid-unit;
+  // position: absolute;
+  // z-index: 100;
+  // top: $grid-unit;
   width: $grid-unit * 4;
+  margin-top: -1em;
+  margin-bottom: 1em;
 }
 
 .page-squares {
   display: flex;
   flex-wrap: wrap;
-  top: $grid-unit * 2;
+  // top: $grid-unit * 2;
 
   .item {
     width: $grid-unit * 2;
     margin: 1em 0;
   }
 
+  .ratio-1 {
+    width: $grid-unit * 2;
+  }
+
+  .ratio-2 {
+    width: $grid-unit * 4;
+  }
+
   .vimeo-video {
     height: 100%;
   }
 }
+
+
+// older more complicated grid
 
 .page-grid {
   display: none;

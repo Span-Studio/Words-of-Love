@@ -73,7 +73,7 @@ class VimeoPlayer {
     }
 
     this.player = new Vimeo.Player(el, options);
-    this.resizeHelper();
+    // this.resizeHelper();
   }
 }
 

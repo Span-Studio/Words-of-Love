@@ -1,11 +1,10 @@
 nav.main-nav {
   display: flex;
-  position: fixed;
-  top: 0;
-  z-index: 10;
+  // position: fixed;
+  // top: 0;
+  // z-index: 10;
   width: $grid-width;
   justify-content: space-between;
-
 
   .logo {
     display: block;
