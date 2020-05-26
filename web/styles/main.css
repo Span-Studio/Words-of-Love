@@ -615,7 +615,7 @@ body {
 
 .layout {
   margin: 0 auto;
-  max-width: 80vw;
+  max-width: calc(80vw + 2em);
 }
 
 .page-message {
@@ -630,20 +630,24 @@ body {
 }
 
 .page-squares .item {
+  width: calc(26.6666666667vw - 2em);
   width: 26.6666666667vw;
   margin: 1em 0;
+  padding: 0 1em;
 }
 
 .page-squares .ratio-1 {
+  width: calc(26.6666666667vw - 2em);
   width: 26.6666666667vw;
 }
 
 .page-squares .ratio-2 {
+  width: calc(53.3333333333vw - 2em);
   width: 53.3333333333vw;
 }
 
 .page-squares .vimeo-video {
-  height: 100%;
+  width: 100%;
 }
 
 .page-grid {
