@@ -57,7 +57,7 @@
     "js-cookie": "^2.2.0",
     "laravel-mix": "^5.0.1",
     "leaflet": "^1.6.0",
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "mapbox-gl": "^1.10.1",
     "normalize.css": "^8.0.1",
     "objectFitPolyfill": "^2.3.0",
